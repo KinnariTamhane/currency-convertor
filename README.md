@@ -1,3 +1,3 @@
 # currencyConvertor
 
-A currency convertor application created in react typescript and tailwind
+A currency convertor application created in React.js Typescript and TailwindCSS
