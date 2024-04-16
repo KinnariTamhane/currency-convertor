@@ -7,7 +7,7 @@ function ConvertorContainer() {
   const [selectedCountry, setSelectedCountry] = useState<string>(countries[0]);
   const [amount, setAmount] = useState<number>(0);
 
-  const [INR, setINR] = useState<number>(0);
+  const [inr, setInr] = useState<number>(0);
   const [dollar, setDollar] = useState<number>(0);
   const [pound, setPound] = useState<number>(0);
 
@@ -23,17 +23,17 @@ function ConvertorContainer() {
     e.preventDefault();
     switch(selectedCountry){
       case 'India':
-          setINR(amount);
+          setInr(amount);
           setPound(amount* 0.0096);
           setDollar(amount* 0.012);
           break;
       case 'USA' :
-          setINR(amount*83.611363);
+          setInr(amount*83.611363);
           setPound(amount* 0.80);
           setDollar(amount);
         break;
       case 'UK' :
-          setINR(amount*104.05);
+          setInr(amount*104.05);
           setPound(amount);
           setDollar(amount*1.24);
           break;
@@ -60,7 +60,7 @@ function ConvertorContainer() {
           </form>
           <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
           <div>
-            <p className='mb-4'>India (INR) : {Math.round(INR * 100) / 100}</p>
+            <p className='mb-4'>India (INR) : {Math.round(inr * 100) / 100}</p>
             <p className='mb-4'>USA (Dollar) : {Math.round(dollar * 100) / 100}</p>
             <p className='mb-4'>UK (Pound) : {Math.round(pound * 100) / 100}</p>
           </div>
